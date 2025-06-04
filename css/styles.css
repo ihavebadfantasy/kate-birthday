@@ -1,0 +1,528 @@
+/* ==================================
+   CSS-переменные для цветовой палитры
+   ================================== */
+:root {
+    --color-bg: #f5f7f9;          /* чуть более тёплый светлый фон */
+    --color-secondary-bg: #ffffff;
+    --color-text: #1a1a1a;
+    --color-accent-1: #3ab0a4;    /* бирюзовый акцент */
+    --color-accent-2: crimson;    /* медно-оранжевый акцент */
+    --color-border: #dfe3e6;
+    --color-muted: #666666;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+/* Общие сбросы */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background: var(--color-bg);
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Ссылки */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ======================
+   1. Hero-секция
+   ====================== */
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(
+            135deg,
+            rgba(245, 247, 249, 0.9) 0%,
+            rgba(235, 242, 245, 0.9) 100%
+    );
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: 3rem; /* 48px */
+    color: #ffffff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+.hero-subtitle {
+    margin-top: 10px;
+    font-size: 1.125rem; /* 18px */
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+.btn-primary {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: var(--color-accent-2);
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background: hsl(348, 83%, 30%);
+    transform: translateY(-2px);
+}
+
+.seal-hover {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 20px;
+    right: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hero-content:hover .seal-hover {
+    opacity: 1;
+}
+
+/* ======================
+   Скролл к галерее
+   ====================== */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ======================
+   2. Фотогалерея дружбы (кастомный слайдер)
+   ====================== */
+.gallery-section {
+    background: var(--color-secondary-bg);
+    padding: 60px 20px 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+/*.gallery-section::before {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    top: 10%;*/
+/*    left: 5%;*/
+/*    width: 250px;*/
+/*    height: 250px;*/
+/*    background: rgba(58, 176, 164, 0.1);*/
+/*    border-radius: 50%;*/
+/*    z-index: 0;*/
+/*}*/
+
+.section-title {
+    position: relative;
+    font-family: var(--font-heading);
+    font-size: 2rem; /* 32px */
+    color: var(--color-text);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Слайдер */
+.slider {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.slides-container {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    max-height: 600px;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slide.active {
+    display: block;
+}
+
+/* Кнопки слайдера */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--color-text);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.2s ease, transform 0.2s ease;
+    z-index: 2;
+}
+
+.slider-btn:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+/* Lightbox */
+.lightbox-overlay {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-overlay img#lightbox-image {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.prev-lightbox {
+    left: 20px;
+}
+
+.next-lightbox {
+    right: 20px;
+}
+
+/* ======================
+   3. Интерактивный гаджет
+   ====================== */
+.interactive-section {
+    background: var(--color-secondary-bg);
+    padding: 60px 20px 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bouquet-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+}
+
+.section-subtitle {
+    font-family: var(--font-heading);
+    font-size: 1.75rem; /* 28px */
+    margin-bottom: 20px;
+    color: var(--color-text);
+}
+
+.drag-area {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 40px;
+    position: relative;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.draggable-item {
+    width: 80px;
+    height: 80px;
+    cursor: grab;
+}
+
+.draggable-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.vase {
+    width: 100px;
+    height: 120px;
+    border: 2px dashed var(--color-border);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fafafa;
+    position: relative;
+}
+
+.vase img {
+    width: 60%;
+    opacity: 0.3;
+}
+
+.bouquet-message {
+    display: none;
+    margin-top: 20px;
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--color-accent-2);
+}
+
+.flying-area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    z-index: 10;
+}
+
+/* Летучая зверушка */
+.flying-creature {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    animation: fly-across 12s linear infinite;
+    cursor: pointer;
+}
+
+@keyframes fly-across {
+    0% {
+        left: -80px;
+        top: 20%;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    50% {
+        left: 50%;
+        top: 40%;
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        left: 110%;
+        top: 60%;
+        opacity: 0;
+    }
+}
+
+/* ======================
+   4. Поздравительное слово
+   ====================== */
+.congrats-section {
+    background: crimson;
+    padding: 60px 20px 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.congrats-section::before {
+    content: '';
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 200px;
+    height: 200px;
+    background: rgba(214, 90, 49, 0.05);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.congrats-section::after {
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    width: 150px;
+    height: 150px;
+    background: rgba(58, 176, 164, 0.05);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.congrats-text {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 30px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.congrats-text p {
+    font-size: 1.125rem; /* 18px */
+    color: var(--color-text);
+    margin-bottom: 16px;
+    transition: text-shadow 0.5s ease;
+}
+
+.congrats-text p:hover {
+    animation: text-flash 0.5s;
+}
+
+@keyframes text-flash {
+    0% {
+        text-shadow: none;
+    }
+    50% {
+        text-shadow: 0 0 8px rgba(58, 176, 164, 0.5);
+    }
+    100% {
+        text-shadow: none;
+    }
+}
+
+.signature {
+    font-family: var(--font-heading);
+    font-size: 1rem; /* 16px */
+    color: var(--color-muted);
+    text-align: right;
+    margin-top: 24px;
+}
+
+/* ======================
+   5. Footer
+   ====================== */
+footer {
+    background: var(--color-secondary-bg);
+    border-top: 1px solid var(--color-border);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-text {
+    font-size: 0.875rem; /* 14px */
+    color: var(--color-muted);
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-link img {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover img {
+    transform: scale(1.1);
+}
+
+/* ======================
+   Адаптивность
+   ====================== */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    .slides-container {
+        height: 40vh;
+    }
+    .drag-area {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
