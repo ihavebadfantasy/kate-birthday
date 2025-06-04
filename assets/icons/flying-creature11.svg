@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+    <!-- Тело белки-летяги -->
+    <ellipse cx="32" cy="36" rx="14" ry="10" fill="#E2A76F" stroke="#B5844C" stroke-width="2"/>
+
+    <!-- Хвост пушистый сбоку -->
+    <path
+            d="M18 36
+       Q 6 46, 18 56
+       Q 28 64, 34 54
+       Q 30 48, 18 36
+       Z"
+            fill="#E2A76F" stroke="#B5844C" stroke-width="2"
+    />
+
+    <!-- Лицевая часть -->
+    <circle cx="32" cy="22" r="10" fill="#E2A76F" stroke="#B5844C" stroke-width="2"/>
+
+    <!-- Уши -->
+    <path d="M24 18 Q 24 12, 28 14 Q 30 12, 30 18 Z" fill="#F7C9A3" stroke="#B5844C" stroke-width="1.5"/>
+    <path d="M40 18 Q 40 12, 36 14 Q 34 12, 34 18 Z" fill="#F7C9A3" stroke="#B5844C" stroke-width="1.5"/>
+
+    <!-- Глаза -->
+    <ellipse cx="28" cy="22" rx="3" ry="4" fill="#FFFFFF" stroke="#B5844C" stroke-width="1"/>
+    <circle cx="28" cy="22" r="2" fill="#1A1A1A"/>
+    <ellipse cx="36" cy="22" rx="3" ry="4" fill="#FFFFFF" stroke="#B5844C" stroke-width="1"/>
+    <circle cx="36" cy="22" r="2" fill="#1A1A1A"/>
+
+    <!-- Блики в глазах -->
+    <circle cx="27" cy="21" r="1" fill="#FFFFFF"/>
+    <circle cx="35" cy="21" r="1" fill="#FFFFFF"/>
+
+    <!-- Нос и рот -->
+    <path d="M32 26 Q 30 28, 32 30 Q 34 28, 32 26 Z" fill="#B5844C"/>
+    <path d="M30 30 Q 32 32, 34 30" stroke="#B5844C" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Патагонии (крылья) -->
+    <path
+            d="M18 36
+       C 14 30, 14 22, 22 18
+       L 42 18
+       C 50 22, 50 30, 46 36
+       Z"
+            fill="#FFDDB0" stroke="#B5844C" stroke-width="2"
+    />
+
+    <!-- Полоски на крыльях -->
+    <path d="M22 20 L42 20" stroke="#B5844C" stroke-width="1"/>
+    <path d="M20 24 L44 24" stroke="#B5844C" stroke-width="1"/>
+    <path d="M18 28 L46 28" stroke="#B5844C" stroke-width="1"/>
+
+    <!-- Небольшие блики на теле -->
+    <circle cx="26" cy="32" r="1.5" fill="#F7D6AC"/>
+    <circle cx="38" cy="42" r="1.5" fill="#F7D6AC"/>
+</svg>

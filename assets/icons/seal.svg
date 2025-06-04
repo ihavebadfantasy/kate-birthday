@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="64" viewBox="-2 -2 68 68" xmlns="http://www.w3.org/2000/svg">
+    <!-- Тело -->
+    <ellipse cx="32" cy="36" rx="24" ry="16" fill="#A0C4FF" stroke="#6D90D6" stroke-width="2"/>
+    <!-- Голова -->
+    <circle cx="32" cy="20" r="14" fill="#A0C4FF" stroke="#6D90D6" stroke-width="2"/>
+    <!-- Лапки -->
+    <circle cx="18" cy="48" r="6" fill="#A0C4FF" stroke="#6D90D6" stroke-width="2"/>
+    <circle cx="46" cy="48" r="6" fill="#A0C4FF" stroke="#6D90D6" stroke-width="2"/>
+    <!-- Глаза -->
+    <circle cx="28" cy="18" r="3" fill="#1A1A1A"/>
+    <circle cx="36" cy="18" r="3" fill="#1A1A1A"/>
+    <!-- Блики в глазах -->
+    <circle cx="27" cy="17" r="1" fill="#FFFFFF"/>
+    <circle cx="35" cy="17" r="1" fill="#FFFFFF"/>
+    <!-- Носик и ротик -->
+    <circle cx="32" cy="22" r="2" fill="#6D90D6"/>
+    <path d="M28 24 Q32 28 36 24" stroke="#6D90D6" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Усы -->
+    <line x1="22" y1="26" x2="28" y2="26" stroke="#6D90D6" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="36" y1="26" x2="42" y2="26" stroke="#6D90D6" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Блики на туловище -->
+    <circle cx="24" cy="34" r="2" fill="#D0E4FF"/>
+    <circle cx="40" cy="40" r="2" fill="#D0E4FF"/>
+</svg>

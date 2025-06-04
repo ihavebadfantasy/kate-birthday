@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+    <!-- Фон пагоды -->
+    <rect x="8" y="24" width="48" height="28" rx="4" ry="4" fill="#F4E0C1" stroke="#DCA35B" stroke-width="2"/>
+    <!-- Крыша нижнего яруса -->
+    <path d="M4 28 C32 0, 60 28, 60 28" fill="#C47F3B" stroke="#A35A24" stroke-width="2"/>
+    <!-- Крыша среднего яруса -->
+    <path d="M12 16 C32 -4, 52 16, 52 16" fill="#E3B573" stroke="#C98F3A" stroke-width="2"/>
+    <!-- Крыша верхнего яруса -->
+    <path d="M20 8 C32 -8, 44 8, 44 8" fill="#FFD27F" stroke="#D4A054" stroke-width="2"/>
+    <!-- Дверь -->
+    <rect x="28" y="34" width="8" height="18" rx="2" ry="2" fill="#FFFFFF" stroke="#C98F3A" stroke-width="1.5"/>
+    <!-- Полосатые колонны -->
+    <line x1="24" y1="34" x2="24" y2="58" stroke="#DCA35B" stroke-width="3" stroke-linecap="round"/>
+    <line x1="40" y1="34" x2="40" y2="58" stroke="#DCA35B" stroke-width="3" stroke-linecap="round"/>
+    <!-- Лампада справа -->
+    <circle cx="52" cy="40" r="4" fill="#FFD27F" stroke="#C98F3A" stroke-width="1.5"/>
+    <path d="M52 36 L52 32" stroke="#C98F3A" stroke-width="1.2" stroke-linecap="round"/>
+    <!-- Лампада слева -->
+    <circle cx="12" cy="40" r="4" fill="#FFD27F" stroke="#C98F3A" stroke-width="1.5"/>
+    <path d="M12 36 L12 32" stroke="#C98F3A" stroke-width="1.2" stroke-linecap="round"/>
+</svg>
