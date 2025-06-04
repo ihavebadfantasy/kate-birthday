@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>С Днём Рождения, Катя!</title>
+
+    <!-- Подключаем стили -->
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- ======================
+     1. Hero-секция
+     ====================== -->
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <img
+            src="assets/images/IMG_4943.jpg"
+            alt="Катя – портрет"
+            class="hero-bg"
+            id="hero-bg"
+    />
+    <div class="hero-content">
+        <h1 class="hero-title">С днём рождения, Катя!</h1>
+        <p class="hero-subtitle">Я скучаю...</p>
+        <button class="btn-primary"  id="scroll-to-gallery">Смотреть фотки</button>
+        <div class="seal-hover" id="seal-hover">
+            <img src="assets/icons/seal.svg" alt="Seal icon" />
+        </div>
+    </div>
+</section>
+
+<!-- ======================
+     2. Фотогалерея дружбы (Кастомный слайдер)
+     ====================== -->
+<section class="gallery-section" id="gallery">
+    <h2 class="section-title">Наши моменты</h2>
+    <div class="slider">
+        <button class="slider-btn prev-btn">‹</button>
+        <div class="slides-container" id="slides-container">
+            <!-- JS добавит сюда слайды динамически -->
+        </div>
+        <button class="slider-btn next-btn">›</button>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox-overlay" id="lightbox-overlay">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <button class="lightbox-nav prev-lightbox" id="lb-prev">&larr;</button>
+        <img
+                src=""
+                alt="Просмотр фото в световом окне"
+                id="lightbox-image"
+        />
+        <button class="lightbox-nav next-lightbox" id="lb-next">&rarr;</button>
+    </div>
+</section>
+
+<!-- ======================
+     3. Интерактивный гаджет
+     ====================== -->
+<section class="interactive-section">
+
+    <div class="flying-area" id="flying-area"></div>
+</section>
+
+<!-- ======================
+     4. Поздравительное слово
+     ====================== -->
+<section class="congrats-section">
+    <div class="congrats-text">
+        <p>
+            Кать, я все еще не очень умею в слова, но хочу, чтобы ты знала:
+        </p>
+        <p>
+            Я в тебе люблю твой контраст. То, как ты сочетаешь несочетаемые на первый взгляд вещи: миниатюрность, красивые ноготочки, модную одежду, элегантные движения, блестящие длинные волосы и твое суровое лицо с мат-перематом, когда все проебались и никак не соберуться в поездку и пивко на ступеньках у дома.
+        </p>
+        <p>
+            Обожаю, как ты можешь подорвать и зажечь любого, когда сама горишь идей.
+        </p>
+        <p>
+            Восхищаюсь тем, как ты ценишь и любишь друзей, как ты готова помочь, когда человек в беде, даже если он сильно тебя обидел.
+        </p>
+        <p>
+            Я хочу, чтобы ты побывала во всех странах, которые мечтаешь увидеть, чтобы близкие были рядом и не забывали говорить тебе, что ты красивая, умная, стильная, замечательно танцуешь и смешно шутишь. Ну и чтобы за работу платили очень многа денюшек, но делать надо было только интересные вещи <3
+        </p>
+        <p class="signature">— Обнимаю, посылаю виртуальные сердечки, Даша</p>
+    </div>
+</section>
+
+<!-- ======================
+     5. Footer
+     ====================== -->
+<footer>
+    <p class="footer-text">Сделано с любовью в Тбилиси</p>
+    <div class="social-icons">
+        <a href="#" class="social-link">
+            <img src="assets/icons/temple.svg" alt="Instagram" />
+        </a>
+        <a href="#" class="social-link">
+            <img src="assets/icons/flying-creature.svg" alt="Telegram" />
+        </a>
+    </div>
+</footer>
+
+<!-- Подключаем скрипт -->
+<script src="js/main.js"></script>
+</body>
+</html>
